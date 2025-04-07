@@ -1,0 +1,73 @@
+body {
+margin: 0;
+font-family: 'Roboto', sans-serif;
+color: #333333;
+background-color: #FFFFFF;
+}
+
+header {
+position: fixed;
+width: 100%;
+background-color: #A8E6CF;
+padding: 10px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+header nav ul {
+list-style: none;
+display: flex;
+gap: 20px;
+}
+
+header nav ul li a {
+text-decoration: none;
+color: #333333;
+padding: 5px;
+transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+color: #00695C;
+}
+
+main {
+margin-top: 80px;
+padding: 20px;
+}
+
+section {
+padding: 40px 0;
+border-bottom: 1px solid #A8E6CF;
+}
+
+.fade-in {
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.8s, transform 0.8s;
+}
+
+/* 既存のCSSに追加 */
+#diary-list ul, #novel-list ul {
+list-style-type: none;
+padding: 0;
+}
+
+#diary-list ul li, #novel-list ul li {
+margin-bottom: 10px;
+}
+
+#diary-list a, #novel-list a {
+color: #00695C;
+text-decoration: none;
+transition: color 0.3s;
+}
+
+#diary-list a:hover, #novel-list a:hover {
+color: #004d40;
+}
