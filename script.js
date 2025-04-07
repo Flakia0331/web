@@ -39,8 +39,10 @@ entry4: `
 document.querySelectorAll('a[data-entry]').forEach(item => {
 item.addEventListener('click', (e) => {
 e.preventDefault();
-const entry = e.target.dataset.entry;
-document.getElementById('diary-content').innerHTML = diaryContent[entry] || "日記の内容が見つかりません。";
+const entry = e.target.getAttribute('data-entry');
+const contentDiv = document.getElementById('diary-content');
+contentDiv.innerHTML = diaryContent[entry] || "日記の内容が見つかりません。";
+contentDiv.classList.remove('hidden'); // 表示するためにクラスを削除
 });
 });
 });
