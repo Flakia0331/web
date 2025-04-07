@@ -3,30 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>小説の本棚</title>
+<title>日記一覧</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header>
 <nav>
-<div class="logo"><a href="index.html">FlakiaのWebページ</a></div>
+<div class="logo"><a href="index.html">私のWebページ</a></div>
 <ul>
 <li><a href="index.html">ホーム</a></li>
-<li><a href="diary.html">日記</a></li>
+<li><a href="novels.html">ノベル</a></li>
 </ul>
 </nav>
 </header>
 
 <main>
 <section>
-<h1>小説の本棚</h1>
+<h1>日記一覧</h1>
 <ul>
-<li>Alva</li>
-<li>チタンの肌、曇天の心</li>
-<li>ブレスレット</li>
+<li><a href="#" data-entry="entry1">2024年8月5日 - 怒りと許しについて</a></li>
+<li><a href="#" data-entry="entry2">2024年8月6日 - 勉強と読書の目標設定</a></li>
+<li><a href="#" data-entry="entry3">2024年8月7日 - ポジティブに考えること</a></li>
+<li><a href="#" data-entry="entry4">2024年8月14日 - 美術品の権利問題について</a></li>
 </ul>
 </section>
+
+<section id="diary-detail">
+<h1>日記の詳細</h1>
+<div id="diary-content" class="hidden">日記を選択してください。</div>
+</section>
 </main>
+
+<script src="script.js"></script>
 </body>
 </html>
-
