@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlakiaのWebページ！</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+<nav>
+<div class="logo">FlakiaのWebページ</div>
+<ul>
+<li><a href="#greeting">ご挨拶</a></li>
+<li><a href="#about">私について</a></li>
+<li><a href="#purpose">目的</a></li>
+<li><a href="#overview">概要</a></li>
+<li><a href="#diary">不定期日記</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+<section id="greeting" class="fade-in">
+<h1>ご挨拶</h1>
+<p>皆さん、ご機嫌いかがでしょうか。これは私の初めてのWebページです。<br>
+ぜひ最後までお楽しみください！</p>
+</section>
+
+<section id="about" class="fade-in">
+<h1>私について</h1>
+<p>私の趣味はピアノ演奏、作曲、音楽鑑賞です。クラシック音楽とボカロ楽曲が好きです。<br>
+興味のある学問は地球科学、プログラミング学、生物学などです。</p>
+</section>
+
+<section id="purpose" class="fade-in">
+<h1>Webページ作成の目的</h1>
+<p>プログラミングに興味があり、初心者向けのWebページ作成に挑戦しました。</p>
+</section>
+
+<section id="overview" class="fade-in">
+<h1>Webページの概要</h1>
+<p>このWebページでは、私の思想や興味の移り変わりを記録しています。<br>
+更新は不定期ですが、興味のある内容を載せていく予定です。</p>
+</section>
+
+<section id="diary" class="fade-in">
+<h1>不定期日記</h1>
+<p>ここには私の日々の記録を載せていきます。</p>
+</section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
