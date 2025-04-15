@@ -1,48 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-const diaryContent = {
-entry1: `
-<h2>2024年8月5日 - 怒りと許しについて</h2>
-<p>ある本に「怒ることはエネルギーを消費することだから、許すことが大切だ」と書かれていました。<br>
-小さな出来事なら不快には思っても怒りまでは感じないかもしれません。<br><br>
-しかし、自分の尊厳を傷つけられるような本当に許せないことが起こった時はどうするべきでしょうか？<br>
-怒るべきところで怒るのか、それとも許すべきなのか。<br><br>
-とはいえ、人に怒るのはとても疲れます。できるなら、平和に生きたいものです。</p>
-`,
-entry2: `
-<h2>2024年8月6日 - 勉強と読書の目標設定</h2>
-<p>夏休みが始まり、毎日を楽しく過ごしていますが、大学の講義がある日と比べると怠惰な生活を送ってしまっている気がして少し焦りを感じています。<br><br>
-そこで、今日から「毎日何かに取り組む」という目標を立てました。<br><br>
-具体的には「勉強」と「読書」。勉強に関しては興味のある分野に机に向かって取り組むこと。<br>
-量をこなすことではなく、机に向かうこと自体を目標としました。<br><br>
-読書については、毎日論文を1本読むか、本を1章分読むことを目標にしました。<br><br>
-今日から頑張ります！（でも正直、三日坊主になりそうです...）</p>
-`,
-entry3: `
-<h2>2024年8月7日 - ポジティブに考えること</h2>
-<p>ある本に「何事もポジティブに考えることが大切だ」と書かれていました。<br><br>
-たしかにその通りだと思いますが、ポジティブに考えられないこともあると思います。<br>
-例えば、身近な人の死などはポジティブには捉えられないものです。<br><br>
-強いて言うなら「悲しむことができるのは、それだけ人を愛していた証拠」という見方もできますが、それでも限界はあるでしょう。<br><br>
-一方で、本には「挑戦できる環境への感謝」や「叱られることに感謝する」など、前向きな姿勢を持つことの重要性も書かれていました。<br>
-前向きに考えること自体は、確かに人生を豊かにしてくれると思います。</p>
-`,
-entry4: `
-<h2>2024年8月14日 - 美術品の権利問題について</h2>
-<p>最近、美術に関する書籍を読み、美術品の権利問題について興味を持ちました。<br><br>
-特にヨーロッパで多く発生している問題で、歴史的な背景が深く関わっています。<br><br>
-戦争や紛争、政治的な動乱の中で、作品の所有者が変わったり、作品が盗まれたりしたことが問題の原因です。<br><br>
-例えば、ナポレオンの遠征やナチス・ドイツによる略奪など。<br>
-美術品の背後には歴史や文化、権力争いが絡んでおり、非常に興味深いと感じました。</p>
-`
-};
+  // --- フェードイン効果 ---
+  const fadeEls = document.querySelectorAll('.fade-in');
 
-document.querySelectorAll('a[data-entry]').forEach(item => {
-item.addEventListener('click', (e) => {
-e.preventDefault();
-const entry = e.target.getAttribute('data-entry');
-const contentDiv = document.getElementById('diary-content');
-contentDiv.innerHTML = diaryContent[entry] || "日記の内容が見つかりません。";
-contentDiv.classList.remove('hidden'); // 表示するためにクラスを削除
-});
-});
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  fadeEls.forEach(el => observer.observe(el));
 });
